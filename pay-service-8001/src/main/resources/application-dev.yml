@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: pay-service
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver        #mysql驱动包
+    url: jdbc:mysql://192.168.56.22:3306/pay-service?useUnicode=true&characterEncoding-utr-8&useSSL=false
+    username: root
+    password: mysql
+
+mybatis:
+  mapper-locations: classpath:DB/mapper/*.xml
+  type-aliases-package: com.cesgroup.springcloud.entity       #所有Entity别名类所在包
