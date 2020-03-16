@@ -25,7 +25,7 @@ import java.util.Scanner;
  **/
 public class CodeGenerator {
     /**
-     * 父项目地址
+     * 父项目地址1
      */
     public static String PROJECT_PATH = System.getProperty("user.dir");
     /**
