@@ -7,6 +7,15 @@ spring:
     username: root
     password: mysql
 
-mybatis:
-  mapper-locations: classpath:DB/mapper/*.xml
-  type-aliases-package: com.cesgroup.springcloud.entity       #所有Entity别名类所在包
+mybatis-plus:
+  #  global-config:
+  #    db-config:
+  #      table-prefix: T_A1_
+  #      id-type: uuid
+  mapper-locations: classpath*:DB/mapper/*.xml
+  type-aliases-package: com.cesgroup.springcloud.entity
+  configuration:
+    cache-enabled: false
+logging:
+  level:
+    com.cesgroup.springcloud.mapper: debug

@@ -1,11 +1,12 @@
 package com.cesgroup.springcloud.mapper;
 
-import com.cesgroup.springcloud.entity.Payment;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.cesgroup.springcloud.entity.Payment;
+import org.apache.ibatis.annotations.Param;
 
 /**
  * <p>
- *  Mapper 接口
+ * Mapper 接口
  * </p>
  *
  * @author Duan.jw
@@ -13,4 +14,7 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
  */
 public interface PaymentMapper extends BaseMapper<Payment> {
 
+    int create(Payment payment);
+
+    Payment getPaymentById(@Param("id") Long id);
 }
